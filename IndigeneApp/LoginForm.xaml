@@ -1,0 +1,71 @@
+﻿<Window x:Class="IndigeneApp.LoginForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        OverridesDefaultStyle="True"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResizeWithGrip"
+        
+        Title="Login Form" Height="330" Width="450">
+    <Window.Template>
+        <ControlTemplate TargetType="Window">
+            <Border BorderThickness="5" Background="White" BorderBrush="{StaticResource AppHeaderBackground}">
+                <ContentPresenter Content="{TemplateBinding Content}"/>
+            </Border>
+        </ControlTemplate>
+    </Window.Template>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Right"  >
+            <Button BorderThickness="0" Margin="3" ToolTip="Close application" x:Name="closeButton" Click="closeButton_Click" Background="Transparent">
+                <Image Opacity="0.2" Width="25" Height="19" x:Name="searchButtonImage" Source="Media\appbar.axis.x.letter.png"/>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Margin="20" HorizontalAlignment="Center" FontWeight="ExtraBlack" FontSize="18"  BorderThickness="0" Foreground="Gray">
+                i-Slog App
+            </Label>
+            <Label Margin="0"  FontWeight="SemiBold" FontSize="13"  BorderThickness="0" >
+                Login
+            </Label>
+            <Border BorderThickness="0.8" BorderBrush="{StaticResource AppBorder}" Margin="0,0,0,10" >
+                <StackPanel/>
+            </Border>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0">Account name</Label>
+                <Label Grid.Column="0" Grid.Row="1">Password</Label>
+                <ComboBox Width="180" x:Name="accountNameComboBox" Grid.Row="0" Grid.Column="1" Padding="4" Margin="4">
+                    <ComboBoxItem Content="Administrator"/>
+                    <ComboBoxItem Content="User"/>
+                </ComboBox>
+                <PasswordBox  x:Name="password" Grid.Row="1" Grid.Column="1"  Padding="4" Margin="4"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel  Grid.Row="2" Orientation="Vertical" x:Name="buttonContainer" Margin="0,48,0,0">
+            <Border BorderThickness="0.8" BorderBrush="{StaticResource AppBorder}" Margin="0,10,0,10" >
+                <StackPanel/>
+            </Border>
+            <Border HorizontalAlignment="Left" Height="50" Margin="-9,10,0,-10" VerticalAlignment="Top" Width="332">
+                <Button x:Name="loginButton" Click="loginButton_Click" Content="Login" Margin="0,-8,-31,29" HorizontalAlignment="Right" Width="97" Style="{StaticResource PrimaryButton}" Height="Auto"/>
+            </Border>
+        </StackPanel>
+
+
+    </Grid>
+
+</Window>

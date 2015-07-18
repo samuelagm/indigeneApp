@@ -1,0 +1,119 @@
+﻿<Window x:Class="IndigeneApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Loaded="Window_Loaded"        
+        Background="{StaticResource AppBackground}"
+        WindowState="Maximized"
+        Title="i-Slog App" Height="550" Width="725">
+    <Window.Resources>
+        <Style x:Key="headerButtons" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid x:Name="Overlay" Panel.ZIndex="1000" Visibility="Collapsed">
+            <Grid.Background>
+                <SolidColorBrush Color="Black" Opacity=".5"/>
+            </Grid.Background>
+
+            <!-- Add controls as needed -->
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Border Panel.ZIndex="100" Width="160" Background="{StaticResource AppSideBarBackground}" x:Name="SideBarBorder" >
+                <!--<Border.Triggers>
+                <EventTrigger RoutedEvent="Border.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard TargetProperty="Width">
+                                <DoubleAnimation Duration="0:0:0.2" AccelerationRatio="0.5" To="160" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Border.MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard TargetProperty="Width">
+                                <DoubleAnimation Duration="0:0:0.2" AccelerationRatio="0.5" To="60"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Border.Triggers>-->
+
+                <DockPanel VerticalAlignment="Stretch"  HorizontalAlignment="Left" Grid.Column="0">
+                    <StackPanel DockPanel.Dock="Top" Orientation="Vertical">
+                        <!--<StackPanel  Height="50" Width="160" Margin="0,0,0,10" Background="{StaticResource SideBarHeaderBackground}">
+                            <TextBlock HorizontalAlignment="Center" Margin="0,5,0,0" Foreground="White" Height="auto"  Padding="0,10,10,10" FontSize="15" FontWeight="SemiBold">
+                    i-Slog Data App
+                            </TextBlock>
+                        </StackPanel>-->
+                        <StackPanel Margin="0,10,0,0"  x:Name="mainNavigation" Orientation="Vertical">
+                            <Button Style="{StaticResource SideBarButton}" Padding="15,0,20,10" HorizontalContentAlignment="Left" Width="160" x:Name="homeButtom" 
+                    Click="homeButtom_Click" Margin="0,0,0,5">
+                                <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Width="115" Orientation="Horizontal" Height="40">
+                                    <Image Source="Media\appbar.home.png"/>
+                                    <TextBlock Margin="10" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left">HOME</TextBlock>
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource SideBarButton}" Padding="15,0,20,10" HorizontalContentAlignment="Left" Width="auto" x:Name="newIndigeneButton" 
+                    Click="newIndigeneButton_Click"  Margin="0,0,0,5" >
+                                <StackPanel Margin="10,0,0,0" Width="auto" Orientation="Horizontal" Height="40">
+                                    <Image Source="Media\appbar.add.png"/>
+                                    <TextBlock Margin="10" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left">ADD INDIGENE</TextBlock>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel Visibility="Hidden" x:Name="backNavigation">
+                            <Button Click="backNavigationButton_Click" Style="{StaticResource SideBarButton}" Padding="15,0,20,10" HorizontalContentAlignment="Center" Width="auto" x:Name="backNavigationButton" 
+                    Margin="0,0,0,5" >
+                                <Image Source="Media\appbar.navigate.previous.png" Height="60" Width="60"/>
+
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Bottom" DockPanel.Dock="Bottom">
+                        <TextBlock Padding="10" HorizontalAlignment="Center" Foreground="Gray" DockPanel.Dock="Bottom">
+                        Slug Data Company
+                        </TextBlock>
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <StackPanel Grid.Column="1">
+                <DockPanel Height="50" Background="{StaticResource AppHeaderBackground}">
+                    <Label Content="" x:Name="headerTitle" DockPanel.Dock="Left" Margin="30,5,0,0" Foreground="White" Height="auto" VerticalAlignment="Center" Padding="0,10,10,10" FontSize="15" FontWeight="SemiBold"/>
+                    <StackPanel   Orientation="Horizontal" Margin="20,0,10,0" VerticalAlignment="Center" DockPanel.Dock="Right" HorizontalAlignment="Right">
+                        <Button ToolTip="Application Settings"  Margin="10,0,17,0" x:Name="configurationButton2" Click="configurationButton_Click" Style="{StaticResource headerButtons}">
+                            <!--<TextBlock  Padding="4" Foreground="WhiteSmoke" FontWeight="Bold">
+                            Settings
+                            </TextBlock>-->
+                            <Image Width="30" Source="Media\appbar.settings.png"/>
+                        </Button>
+                    </StackPanel>
+                </DockPanel>
+                <Border BorderBrush="{StaticResource AppBorder}" BorderThickness="0.3">
+                    <StackPanel/>
+                </Border>
+                <Border BorderBrush="{StaticResource AppBorder}" BorderThickness="0.3">
+                    <StackPanel/>
+                </Border>
+                <StackPanel HorizontalAlignment="Stretch" Margin="30, 10,30,10" Height="auto"  x:Name="ControlsPanel"/>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+</Window>
