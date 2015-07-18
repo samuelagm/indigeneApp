@@ -102,15 +102,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="IBackNavigationListener.cs" />
-    <Compile Include="IConfigurationFormInteraction.cs" />
-    <Compile Include="IIndigeneUpdate.cs" />
-    <Compile Include="IParentFormInteraction.cs" />
+    <Compile Include="Interfaces\IBackNavigationListener.cs" />
+    <Compile Include="Interfaces\IConfigurationFormInteraction.cs" />
+    <Compile Include="Interfaces\IIndigeneUpdate.cs" />
+    <Compile Include="Interfaces\IParentFormInteraction.cs" />
     <Compile Include="LoginForm.xaml.cs">
       <DependentUpon>LoginForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ValidationAttribute.cs" />
-    <Compile Include="ValidationHelper.cs" />
+    <Compile Include="Objects\ValidationAttribute.cs" />
+    <Compile Include="Objects\ValidationHelper.cs" />
     <Compile Include="WaitDialog.xaml.cs">
       <DependentUpon>WaitDialog.xaml</DependentUpon>
     </Compile>
@@ -156,9 +156,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ElligibilityToImageConverter.cs" />
-    <Compile Include="DataBaseConnection.cs" />
-    <Compile Include="ICommonData.cs" />
+    <Compile Include="Objects\ElligibilityToImageConverter.cs" />
+    <Compile Include="Objects\DataBaseConnection.cs" />
+    <Compile Include="Interfaces\ICommonData.cs" />
     <Compile Include="Controls\IndigeneEditFormControl.xaml.cs">
       <DependentUpon>IndigeneEditFormControl.xaml</DependentUpon>
     </Compile>
@@ -184,7 +184,7 @@
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Child.cs" />
     <Compile Include="Models\Indigene.cs" />
-    <Compile Include="PanelManager.cs" />
+    <Compile Include="Objects\PanelManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

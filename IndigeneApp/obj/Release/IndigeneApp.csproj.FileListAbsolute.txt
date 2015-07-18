@@ -35,3 +35,4 @@ C:\Users\Samuel\documents\visual studio 2012\Projects\IndigeneApp\IndigeneApp\ob
 C:\Users\Samuel\documents\visual studio 2012\Projects\IndigeneApp\IndigeneApp\obj\Release\IndigeneApp.csproj.GenerateResource.Cache
 C:\Users\Samuel\documents\visual studio 2012\Projects\IndigeneApp\IndigeneApp\obj\Release\IndigeneApp.exe
 C:\Users\Samuel\documents\visual studio 2012\Projects\IndigeneApp\IndigeneApp\obj\Release\IndigeneApp.pdb
+C:\Users\Samuel\documents\visual studio 2012\Projects\IndigeneApp\IndigeneApp\obj\Release\IndigeneApp.csprojResolveAssemblyReference.cache
